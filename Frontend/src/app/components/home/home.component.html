@@ -1,0 +1,18 @@
+<div class="p-4 d-flex flex-column align-items-center">
+  <div
+    *ngIf="!this.shared.currentUser"
+    class="col mb-3 d-flex flex-column align-items-stretch"
+  >
+    <h3>Please <a routerLink="/login">login</a> to continue.</h3>
+    <span>Don't have an account? <a routerLink="/register">Sign up</a></span>
+  </div>
+  <div
+    *ngIf="this.shared.currentUser"
+    class="col mb-3 d-flex flex-column align-items-stretch"
+  >
+    <h3>Welcome, {{ this.shared.currentUser }}</h3>
+    <button class="btn btn-primary" routerLink="/messages/inbox">
+      Messages
+    </button>
+  </div>
+</div>

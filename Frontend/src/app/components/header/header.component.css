@@ -1,0 +1,7 @@
+.header {
+  border-bottom: 3px solid var(--bs-primary);
+}
+
+.header a {
+  text-decoration: none;
+}

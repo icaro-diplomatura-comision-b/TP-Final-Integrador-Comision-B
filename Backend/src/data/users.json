@@ -1,0 +1,113 @@
+{
+ "users": [
+  {
+   "id": "1",
+   "username": "luke.sky",
+   "firstName": "Luke",
+   "lastName": "Skywalker",
+   "password": "lastjedi123",
+   "country": "Tatooine",
+   "city": "unkown",
+   "notDeletable": true
+  },
+  {
+   "id": "2",
+   "username": "chewie",
+   "firstName": "Chew",
+   "lastName": "Bacca",
+   "password": "rawwwr",
+   "country": "Kashyyyk",
+   "city": "unkown",
+   "notDeletable": true
+  },
+  {
+   "id": "3",
+   "username": "mramirez",
+   "lastName": "martinez",
+   "firstName": "martin",
+   "password": "123",
+   "country": "argentina",
+   "city": "san luis",
+   "notDeletable": false
+  },
+  {
+   "id": "4",
+   "username": "rcordoba",
+   "lastName": "cordoba",
+   "firstName": "ricardo",
+   "password": "1234",
+   "country": "argentina",
+   "city": "santa fe",
+   "notDeletable": false
+  },
+  {
+   "id": "5",
+   "username": "rsosa",
+   "lastName": "sosa",
+   "firstName": "roberto",
+   "password": "1234",
+   "country": "argentina",
+   "city": "tucuman",
+   "notDeletable": false
+  }
+
+ ],
+ "messages": [
+  {
+   "id": "1",
+   "senderId": "1",
+   "receiverId": "1",
+   "text": "Mensaje de prueba de Luke Skywalker",
+   "notDeletable": true
+  },
+  {
+   "id": "2",
+   "senderId": "1",
+   "receiverId": "2",
+   "text": "Chewie, a dónde nos dirijimos?",
+   "notDeletable": true
+  },
+  {
+   "id": "3",
+   "senderId": "2",
+   "receiverId": "1",
+   "text": "Raaaawwwwrr",
+   "notDeletable": true
+  },
+  {
+   "id": "4",
+   "senderId": "1",
+   "receiverId": "2",
+   "text": "Muy bien, preparémonos para el salto al hiperespacio!",
+   "notDeletable": true
+  },
+  {
+   "id": "5",
+   "senderId": "2",
+   "receiverId": "3",
+   "text": "Hola",
+   "notDeletable": false
+  },
+  {
+   "id": "7",
+   "senderId": "2",
+   "receiverId": "4",
+   "text": "Buenos dias Ricardo",
+   "notDeletable": false
+  },
+  {
+   "id": "8",
+   "senderId": "2",
+   "receiverId": "3",
+   "text": "Hola a Martin",
+   "notDeletable": false
+  },
+  {
+   "id": "9",
+   "senderId": "2",
+   "receiverId": "5",
+   "text": "Hola carola",
+   "notDeletable": false
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+<div class="d-flex flex-column align-items-center">
+  <h3>User Registration</h3>
+  <form
+    class="register-form col mb-3 d-flex flex-column align-items-stretch"
+    [formGroup]="newUserForm"
+  >
+    <div class="mb-3">
+      <label for="username" class="form-label"> Username </label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        name="username"
+        formControlName="username"
+        placeholder="Username"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="firstName" class=""> First Name </label>
+      <input
+        type="text"
+        id="firstName"
+        class="form-control"
+        name="firstName"
+        formControlName="firstName"
+        placeholder="First Name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="lastName" class=""> Last Name </label>
+      <input
+        type="text"
+        id="lastName"
+        class="form-control"
+        name="lastName"
+        formControlName="lastName"
+        placeholder="Last Name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class=""> Password </label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        name="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="country" class=""> Country </label>
+      <input
+        type="text"
+        id="country"
+        class="form-control"
+        name="country"
+        formControlName="country"
+        placeholder="Country"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="city" class=""> City </label>
+      <input
+        type="text"
+        id="city"
+        class="form-control"
+        name="city"
+        formControlName="city"
+        placeholder="City"
+      />
+    </div>
+
+    <button class="btn btn-primary" (click)="submitNewUser()">Register</button>
+  </form>
+  <p class="align-self-center">Return to <a routerLink="/login">Login</a></p>
+</div>

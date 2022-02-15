@@ -1,0 +1,36 @@
+<div class="d-flex px-3 flex-column align-items-center">
+  <h2>{{ this.capitalize(identifier) }}</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="col-1" scope="col">Sender</th>
+        <th class="col-1" scope="col">Receiver</th>
+        <th class="col" scope="col">Message</th>
+        <th class="col-1" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let message of this.messagesService.getMailbox(this.identifier)"
+      >
+        <td>{{ message.senderId }}</td>
+        <td>{{ message.receiverId }}</td>
+        <td>{{ message.text }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn-close"
+            (click)="this.deleteMessage(message.id)"
+          ></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5
+    class="mb-3"
+    *ngIf="!this.messagesService.getMailbox(this.identifier).length"
+  >
+    You dont have any {{ this.identifier }} messages
+  </h5>
+  <button class="btn btn-primary" (click)="this.refresh()">Refresh</button>
+</div>

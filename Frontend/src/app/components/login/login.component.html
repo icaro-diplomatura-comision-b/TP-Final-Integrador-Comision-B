@@ -1,0 +1,36 @@
+<div class="d-flex flex-column align-items-center">
+  <h3>Login</h3>
+  <form
+    class="login-form col mb-3 d-flex flex-column align-items-stretch"
+    [formGroup]="loginForm"
+  >
+    <div class="mb-3">
+      <label for="username" class="form-label"> Username </label>
+      <input
+        type="text"
+        id="username"
+        class="form-control"
+        name="username"
+        formControlName="username"
+        placeholder="Username"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label"> Password </label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        name="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+
+    <button class="btn btn-primary" (click)="submitLoginData()">Login</button>
+  </form>
+  <p class="align-self-center">
+    Don't have an account? <a routerLink="/register">Sign up</a>
+  </p>
+</div>
