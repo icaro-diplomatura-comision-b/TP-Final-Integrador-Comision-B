@@ -1,0 +1,62 @@
+-No se puede acceder a las funcionalidades del usuario si antes no esta logeado
+-Una vez logeado no se puede acceder a las secciones de invitado como login o register
+-No se puede enviar un mensaje a uno mismo
+-Existe un logout para destruir la sesion y la cookie
+-La cookie dura 10 minutos para que puedan ver todas las funcionalidades de usuario
+-Los usuarios de la api ya estan registrados
+-Se respeto lo que enviaran por body para el registro, inicio de sesion y enviar mensaje
+
+Si inician sesion con LUKE:
+
+http://localhost:3010/api/login
+{
+"username": "luke.sky",
+"password": "lastjedi123"
+}
+
+lista
+http://localhost:3010/api/users
+
+recibidos
+http://localhost:3010/api/users/luke.sky/messages/inbox
+
+enviados
+http://localhost:3010/api/users/luke.sky/messages/sent
+
+enviar mensaje
+http://localhost:3010/api/users/luke.sky/messages
+
+eliminar mensaje
+http://localhost:3010/api/messages/1		=> puede ser cualquier numero si existe en la tabla
+
+cerrar la sesion
+http://localhost:3010/api/users/logout
+
+
+
+Si inician sesion con CHEWIE:
+
+http://localhost:3010/api/login
+{
+"username": "chewie",
+"password": "rawwwr"
+}
+
+lista
+http://localhost:3010/api/users
+
+recibidos
+http://localhost:3010/api/users/chewie/messages/inbox
+
+enviados
+http://localhost:3010/api/users/chewie/messages/sent
+
+enviar mensaje
+http://localhost:3010/api/users/chewie/messages
+
+eliminar mensaje
+http://localhost:3010/api/messages/2		=> puede ser cualquier numero si existe en la tabla
+
+cerrar la sesion
+http://localhost:3010/api/users/logout
+
