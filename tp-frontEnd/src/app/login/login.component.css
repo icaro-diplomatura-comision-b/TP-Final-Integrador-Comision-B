@@ -1,0 +1,61 @@
+
+.conteiner{
+  height: 85vh;
+  background-color: rgb(165, 165, 165);
+  padding-top: 100px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(143, 142, 142);
+  width: 30%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 0;
+  border: 1px solid white;
+  box-shadow: rgb(70, 35, 64) 2px 2px 15px;
+}
+
+form button{
+  color:white;
+  border: 1px solid white;
+  margin-top: 15px;
+}
+
+form button:hover{
+  text-shadow: rgb(70, 35, 64) 2px 2px 3px;
+}
+
+form label{
+  padding-top: 22px;
+  font-size: small;
+}
+
+form a{
+  text-decoration: none;
+}
+
+form a:hover{
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+  form {
+    min-width: 28vh;
+  }
+}
+
+@media only screen and (max-height: 800px){
+  form{
+    padding: 30px 0;
+    max-width: 30vw;
+  }
+}
+
+@media only screen and (max-height: 500px){
+  .conteiner{
+    height: fit-content;
+    padding: 50px;
+  }
+}

@@ -1,0 +1,72 @@
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(117, 117, 117);
+  padding: 22px 38px;
+  box-sizing: border-box;
+}
+
+/* -- Agregar Destinatario -- */
+.agregar-destinatario{
+  display: flex;
+  flex-direction: row;
+}
+.selection{
+  color: rgb(192, 109, 192) !important;
+}
+.agregar-destinatario button{
+  margin: 8px 0 0 20px;
+}
+
+
+/* -- Mostrar Destinatario -- */
+.mostrar-destinatario{
+  min-height: 160px;
+  max-height: 160px;
+  border: 1px dotted white;
+  overflow: auto;
+}
+.destinatarios{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  background-color: rgb(97, 89, 89);
+}
+.eliminar{
+  margin-right: 130px;
+}
+.eliminar:hover{
+  box-shadow: 2px 2px 5px white;
+}
+.eliminar img{
+  filter: invert(85%);
+  width: 80%;
+}
+
+/* -- Mensaje -- */
+.mensaje{
+  padding-top: 30px;
+}
+.etiqueta-caracteres{
+  font-size: smaller;
+  padding-bottom: 5px;
+}
+.enviar{
+  margin: 5px auto;
+  font-size: 1rem;
+}
+
+/* -- Botones -- */
+form button{
+  color:white;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+}
+form button:hover{
+  text-shadow: rgb(116, 57, 106) 3px 3px 3px;
+}
+

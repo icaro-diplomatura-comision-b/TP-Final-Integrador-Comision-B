@@ -1,0 +1,50 @@
+
+.conteiner{
+  height: 85vh;
+  background-color: rgb(165, 165, 165);
+  padding: 50px 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(117, 117, 117);
+  width: 40%;
+  margin: 0 auto;
+  padding: 48px 0;
+  border: 1px solid white;
+  box-shadow: rgb(70, 35, 64) 2px 2px 15px;
+}
+
+.selection{
+  color: rgb(192, 109, 192) !important;
+}
+
+form button{
+  color:white;
+  border: 1px solid white;
+}
+
+form button:hover{
+  text-shadow: rgb(70, 35, 64) 2px 2px 3px;
+}
+
+@media only screen and (max-width: 800px){
+  form{
+    min-width: 32vh;
+  }
+}
+
+@media only screen and (max-height: 800px){
+  form{
+    min-width: 32vw;
+    padding: 30px 10px;
+  }
+}
+
+@media only screen and (max-height: 700px){
+  .conteiner{
+    height: fit-content;
+  }
+}

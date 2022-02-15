@@ -1,0 +1,37 @@
+<form action="">
+
+  <!-- Agregar Destinatario -->
+  <div class="agregar-destinatario">
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione Destinatario</mat-label>
+      <mat-select aria-selected="false" [(value)]="selectedId" [formControl]="selectControl" required>
+        <mat-option [value]="dato.id" class="selection" *ngFor="let dato of listaUsuariosNuevo">{{dato.firstName}} {{dato.lastName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button type="button" color="primary" (click)="addDestinatario()" [disabled]="selectedId==undefined">Agregar</button>
+  </div>
+
+  <!-- Mostrar Destinatario -->
+  <label>Destinatarios:</label>
+  <div class="mostrar-destinatario">
+    <mat-list *ngFor="let item of listaDestinatarios; let indexOfelement=index">
+      <div class="destinatarios">
+        <mat-list-item>{{item.firstName}} {{item.lastName}}</mat-list-item>
+        <button mat-button type="button" class="eliminar" color="primary" (click)="removeDestinatario(indexOfelement)"><img src="../../assets/icon/trash.png" alt=""></button>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+
+
+  <!-- Mensaje -->
+  <mat-form-field appearance="fill" class="mensaje">
+    <mat-label>Escriba aqui su mensaje..</mat-label>
+    <textarea matInput maxlength="144" rows="7" style="resize: none;" required [formControl]="textareaControl"></textarea>
+  </mat-form-field>
+  <label class="etiqueta-caracteres">- Disponibles 144 caracteres -</label>
+
+  <!-- Botón Enviar -->
+  <button mat-button (click)="enviarMensaje()" color="primary" class="enviar">Enviar</button>
+
+</form>
