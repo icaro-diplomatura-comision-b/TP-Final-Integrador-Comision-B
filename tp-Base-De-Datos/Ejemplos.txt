@@ -1,0 +1,33 @@
+
+-- Funcion para el login de usuarios:
+SELECT sp_login('rwoo','12345');
+
+-- Procedimiento para el envio de mensajes
+CALL sp_send_message('steve', 'doug', 'Hola, Doug');
+CALL sp_send_message('doug', 'steve', 'Cómo estás?  ');
+
+-- Procedimiento para la actualizacion de mensajes de un usuario
+CALL sp_update_message(9, 'Hola Steve!!!!');
+
+-- Procedimiento para borrar el mensaje de un usuario
+CALL sp_delete_message(10);
+
+-- Procedimiento para leer mensaje de usuario
+CALL sp_read_message('doug', 'steve')	
+
+-- Procedimiento para leer la conversacion entera de un usuario
+CALL sp_read_conversation('steve', 'doug')
+
+-- Procedimiento para ver la cantidad de usuarios por pais
+CALL rep_user_by_country;
+
+-- Procedimiento que devuelve la cantidad de mensajes por usuario
+CALL rep_messages_by_user;
+
+-- Procedimiento que devuelve el numero de mensajes por fecha
+CALL rep_messages_by_date;
+
+-- Procedimiento que devuelve el numero de mensajes leidos por un usuario
+CALL rep_messages_read_by_user;
+
+	
